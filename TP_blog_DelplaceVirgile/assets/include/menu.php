@@ -33,7 +33,17 @@
                 </ul>
             </div>
             <!-- Fin Page du site -->
-
+            
+            <!-- Formulaire de recherche -->
+            <div class="col-xs-4 pull-right" >
+                <form action="index.php"  method="post" name="formSearch">
+                    <div class="row col-xs-12">
+                        <div class="col-xs-10 "><input type="text" name="keyWord" class="form-control col-xs-12 " id="searchInput" value=rechercher></div>
+                        <div class=""><img src="assets/images/loupe_logo.png" alt="Submit" id="loupeLogo" class="img-responsive pull-right" onclick="document.forms['formSearch'].submit();" /></div>
+                    </div>
+                </form>
+            </div>
+            <!-- Fin Formulaire de recherche -->
            
         </div>
       
