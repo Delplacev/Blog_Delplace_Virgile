@@ -15,13 +15,18 @@ include('assets/protected/connectBDD.php');
                 <!-- contenu -->
                 <?php
                 if (isset($_POST['keyWord'])) { // Si on recherche SINON on affiche tout
-                    $keyWord = explode(" ", $_POST['keyWord']); // On prend tout les mots clée
-                    $query = "SELECT * FROM `article` WHERE `titre` LIKE '%" . $keyWord[0] . "%' OR `description` LIKE '%" . $keyWord[0] . "%' OR `date` LIKE '%" . $keyWord[0] . "%'";
+                    $tab = explode(" ", $_POST['keyWord']); // On prend tout les mots clée
 
-                    // On créer la requete pour rechercher avec tous les mots clée
-                    for ($i = 1; $i < count($keyWord); $i++) {
-                        $query .= "OR `titre` LIKE '%" . $keyWord[$i] . "%' OR `description` LIKE '%" . $keyWord[$i] . "%' OR `date` LIKE '%" . $keyWord[$i] . "%'";
-                    }
+                    $query = 'SELECT * FROM article WHERE';
+
+					$count = count($tab);
+					for ($i = 0; $i < $count; $i++)
+					{
+						$query .= ' (titre LIKE "%'.$tab[$i].'%" OR description LIKE "%'.$tab[$i].'%")';
+						if ($i + 1 < $count)
+							$query .= ' AND';
+					}
+           
                 } else {
                     $query = "SELECT * FROM article";
                 }
