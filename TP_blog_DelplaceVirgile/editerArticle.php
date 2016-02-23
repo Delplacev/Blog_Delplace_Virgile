@@ -39,7 +39,7 @@ if ($connect == true) {
         </div>
 
     </div>
-    </div>s
+    </div>
     <?php
     /* SI ON A DES DONNES EN POST POUR L'AJOUT D'ARTICLE */
     if (($_POST[titreArticle] != "") && ($_POST[descriptionArticle] != "")) {

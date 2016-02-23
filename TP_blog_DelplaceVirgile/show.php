@@ -43,5 +43,3 @@ include('assets/protected/connectBDD.php');
 </div>
 
 <?php include('assets/include/footer.php') ?>
-
-

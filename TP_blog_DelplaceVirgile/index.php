@@ -19,13 +19,13 @@ include('assets/protected/connectBDD.php');
 
                     $query = 'SELECT * FROM article WHERE';
 
-					$count = count($tab);
-					for ($i = 0; $i < $count; $i++)
-					{
-						$query .= ' (titre LIKE "%'.$tab[$i].'%" OR description LIKE "%'.$tab[$i].'%")';
-						if ($i + 1 < $count)
-							$query .= ' AND';
-					}
+                    $count = count($tab);
+                    for ($i = 0; $i < $count; $i++)
+                    {
+                        $query .= ' (titre LIKE "%'.$tab[$i].'%" OR description LIKE "%'.$tab[$i].'%")';
+                        if ($i + 1 < $count)
+                            $query .= ' AND';
+                    }
            
                 } else {
                     $query = "SELECT * FROM article";
@@ -59,5 +59,3 @@ include('assets/protected/connectBDD.php');
 </div>
 
 <?php include('assets/include/footer.php') ?>
-
-
