@@ -16,7 +16,6 @@ include('assets/include/setCookie.php'); ?>
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/freelancer.css" rel="stylesheet">
     <script type="text/javascript" src="assets/js/jquery-1.8.2.js"></script>
-    <script type="text/javascript" src="assets/js/jsBlog.js"></script>
   </head>
 
   <body>
