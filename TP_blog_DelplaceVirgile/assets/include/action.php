@@ -119,7 +119,7 @@ class actionSite {
         session_start();
 
         //delete cookie
-        setcookie('nomConnecter', -1);
+        setcookie('nomConnecter');
         //suppresion de la connection
         unset($_SESSION["session"]);
         session_destroy();
