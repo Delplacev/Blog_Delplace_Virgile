@@ -35,7 +35,7 @@ include('assets/protected/connectBDD.php');
                 $result = mysql_query($query);
 
                  if(mysql_num_rows($result) == 0 ) {
-                    echo "<p>Aucune résultat ne correspond aà votre rcherche";
+                    echo "<p>Aucune résultat ne correspond à votre rcherche</p>";
                  }
                 while ($ligne = mysql_fetch_assoc($result)) {
                     // Affichage des article
@@ -43,7 +43,7 @@ include('assets/protected/connectBDD.php');
                     echo '<center><h3><a href="show.php?idArticle='.$ligne[id].'"">' . $ligne[titre] . '</a></h3><br>';
                     echo '<img src="assets/include/vignettejpg.php?imgSrc=' . $ligne[nomImage] . '" ><br><br>';
                     echo $ligne[description] . '<br> <br><p class="rigth"> date : ' . $ligne[date] . '</p>';
-                    if ($connect == true) {var_dump(mysql_num_rows($result));
+                    if ($connect == true) {
                         echo '<a href="editerArticle.php?idArticle=' . $ligne[id] . '"><input type="button" class="btn-primary" value="Editer"></a>';
                         echo '<a href="assets/include/action.php?action=deleteArticle&idArticle=' . $ligne[id] . '"><input type="button" class="btn-primary" id="btnSuppr" value="Suprimer "></a></br></center><hr>';
                     } else {
