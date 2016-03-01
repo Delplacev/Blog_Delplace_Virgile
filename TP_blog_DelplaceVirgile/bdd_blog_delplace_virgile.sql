@@ -97,6 +97,12 @@ ALTER TABLE `article`
 ALTER TABLE `utilisateurs`
  ADD PRIMARY KEY (`id`);
 
+ --
+ -- Index pour la table `newsletter`
+ --
+ ALTER TABLE `newsletter`
+  ADD PRIMARY KEY (`idAbo`);
+  
 --
 -- AUTO_INCREMENT pour les tables exportées
 --
@@ -106,6 +112,11 @@ ALTER TABLE `utilisateurs`
 --
 ALTER TABLE `article`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT pour la table `newsletter`
+--
+ALTER TABLE `newsletter`
+MODIFY `idAbo` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT pour la table `utilisateurs`
 --
