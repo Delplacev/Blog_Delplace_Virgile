@@ -12,14 +12,15 @@ include('assets/include/setCookie.php'); ?>
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    
+
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/freelancer.css" rel="stylesheet">
     <script type="text/javascript" src="assets/js/jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="assets/js/jsBlog.js"></script>
   </head>
 
   <body>
-      <?php 
+      <?php
       session_start();
       //Si on est connecter
        if(isset($_SESSION["session"])){
@@ -27,5 +28,5 @@ include('assets/include/setCookie.php'); ?>
       } else {
          $connect = false ;
       }
-   
+
     ?>

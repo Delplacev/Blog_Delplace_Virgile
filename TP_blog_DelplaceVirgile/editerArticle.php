@@ -20,7 +20,7 @@ if ($connect == true) {
 
                     //Affichage du formulaire avec les données recupére
                     ?>
-                    <form action="editerArticle.php"  enctype="multipart/form-data" method="post">
+                    <form action="assets/include/serviceWeb.php?action=updateArticle"  enctype="multipart/form-data" method="post">
                         <label class="col-xs-12 text-center">Titre de l'article</label>
                         <input type="text" name="titreArticle" value="<?php echo $ligne[titre] ?>" class="form-control">
                         <input type="text" name="idArticle" value="<?php echo $_GET[idArticle] ?>" class="hidden">
@@ -41,51 +41,6 @@ if ($connect == true) {
     </div>
     </div>
     <?php
-    /* SI ON A DES DONNES EN POST POUR L'AJOUT D'ARTICLE */
-    if (($_POST[titreArticle] != "") && ($_POST[descriptionArticle] != "")) {
-        include('assets/protected/connectBDD.php');
-        mysql_real_escape_string();
-        $query = "";
-        /* SI ON A UN FICHIER ON UPLOAD */
-        $idArticle = $_POST[idArticle];
-        $titreArticle = addslashes($_POST[titreArticle]);
-        $descriptionArticle = addslashes($_POST[descriptionArticle]);
-        if (!empty($_FILES['fichier']['name'])) {
-            $nomImage = $_FILES['fichier']['name'];
-            if (move_uploaded_file($_FILES['fichier']['tmp_name'], "assets/images/" . $nomImage)) {
-                $message = 'Upload réussi !';
-            } else {
-                // Sinon on affiche une erreur systeme
-                $message = 'Erreur';
-            }
-
-            //Mise a jour de l'article
-            $query = "UPDATE `article` ";
-            $query .= " SET `titre` = '" . $titreArticle . "', `description` = '" . $descriptionArticle;
-            $query .= "', `nomImage` = '" . $_FILES['fichier']['name'] . "' WHERE `id` = " . $idArticle . ";";
-        } else {
-            //Mise a jour de l'article
-            $query = "UPDATE `article` ";
-            $query .= " SET `titre` = '" . $titreArticle . "', `description` = '" . $descriptionArticle;
-            $query .= "' WHERE `id` = " . $idArticle . ";";
-        }
-
-        $result = mysql_query($query);
-
-        if (!$result) {
-            die('Requête invalide : ' . mysql_error());
-        } else {
-            ?>
-            <!--Affichahe d'une popup pour confirmer la modification-->
-            <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-            <script type="text/javascript">
-                alert("Votre article à bien était modifier");
-                window.location.href = "index.php";
-            </script>
-            <?php
-        }
-    }
-    /* FIN SI */
 } else {
     include("connexion.php");
 }

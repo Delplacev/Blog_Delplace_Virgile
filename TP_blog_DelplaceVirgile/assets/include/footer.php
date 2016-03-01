@@ -6,6 +6,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <?php
+
+                    
                     //Si on est connecter
                     if (isset($_SESSION["session"]) && isset($_COOKIE["nomConnecter"])) {
                         $connect = true;
@@ -27,4 +29,3 @@
 </body>
 <!-- FIN Body -->
 </html>
-

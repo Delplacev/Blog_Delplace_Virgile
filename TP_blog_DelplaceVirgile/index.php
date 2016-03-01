@@ -5,7 +5,7 @@ include('assets/protected/connectBDD.php');
 ?>
 
 <div class="container">
-<?php include('assets/include/menu.php') ?>  
+<?php include('assets/include/menu.php') ?>
 
     <div class="content">
         <div class="row">
@@ -26,7 +26,7 @@ include('assets/protected/connectBDD.php');
                         if ($i + 1 < $count)
                             $query .= ' AND';
                     }
-           
+
                 } else {
                     $query = "SELECT * FROM article";
                 }
@@ -45,7 +45,7 @@ include('assets/protected/connectBDD.php');
                     echo $ligne[description] . '<br> <br><p class="rigth"> date : ' . $ligne[date] . '</p>';
                     if ($connect == true) {
                         echo '<a href="editerArticle.php?idArticle=' . $ligne[id] . '"><input type="button" class="btn-primary" value="Editer"></a>';
-                        echo '<a href="assets/include/action.php?action=deleteArticle&idArticle=' . $ligne[id] . '"><input type="button" class="btn-primary" id="btnSuppr" value="Suprimer "></a></br></center><hr>';
+                        echo '<a href="assets/include/serviceWeb.php?action=deleteArticle&idArticle=' . $ligne[id] . '"><input type="button" class="btn-primary" id="btnSuppr" value="Suprimer "></a></br></center><hr>';
                     } else {
                         echo "<a href='connexion.php'>Connecter vous pour editer l'article</a>";
                     }

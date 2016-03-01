@@ -1,7 +1,7 @@
 <?php
 $server_name = "localhost";
-$user = "root";
-$mdp = "";
+$user = "userBlog";
+$mdp = "userBlog";
 //Connexion
 $link = mysql_connect($server_name, $user, $mdp );
 //Si connection fail
@@ -10,7 +10,7 @@ if (!$link) {
 }
 		
 //select de la base 
-$db_selected = mysql_select_db('bdd_blog_delplace_virgile', $link);
+$db_selected = mysql_select_db('BDD_BLOG_DelplaceVirgile', $link);
 if (!$db_selected) {
 	die ('Impossible de sélectionner la base de données : ' . mysql_error());
 }

@@ -468,13 +468,18 @@ footer .footer-below {
     display:inline;
 }
 
-#loupeLogo { display:inline;
+#loupeLogo {
+  
     width: 45px;
-    height: 45px;
-    padding: 0;        
+    height: 100%;
+    padding: 0;
 
 }
 
 #loupeLogo:hover {
     cursor: pointer;
+}
+
+.topSearch {
+  height: 25px;
 }

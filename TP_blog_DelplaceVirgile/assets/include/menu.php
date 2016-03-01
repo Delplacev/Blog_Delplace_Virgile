@@ -1,11 +1,28 @@
      <!-- Navigation -->
         <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-            
+          <!-- Formulaire de recherche -->
+          <div class="col-xs-12 topSearch" >
+            <div class="col-xs-8 pull-right">
+              <form action="index.php"  method="post" name="formSearch">
+                  <div class="row col-md-6">
+                      <div class="col-xs-10" ><input type="text" class="col-xs-12"name="keyWord"  id="searchInput" value=rechercher></div>
+                      <div class="col-xs-2"><img src="assets/images/loupe_logo.png" alt="Submit" id="loupeLogo" class="img-responsive pull-right" onclick="document.forms['formSearch'].submit();" /></div>
+                  </div>
+                  <div class="row col-md-6">
+                      <div class="col-xs-8" ><input type="email" class="col-xs-12"  id="emailAddr" value="S'abbonner"></div>
+                      <div class="col-xs-4" ><input class="col-xs-12 text-center" type="button" id="addNews" value="Ok"></div>
+                  </div>
+              </form>
+            </div>
+          </div>
+          <!-- Fin Formulaire de recherche -->
+
             <div class="navbar-header ">
                 <a class="navbar-brand" href="index.php"><h3>Blog de Virgile <small>Pour m'initier à PHP</small></h3></a>;
             </div>
-            
+
+
             <!-- Page du site -->
             <div class="collapse navbar-collapse" >
                 <ul class="nav navbar-nav navbar-right">
@@ -27,25 +44,16 @@
                     </li>
                      <?php } else { ?>
                       <li class="page-scroll">
-                        <a href="assets/include/action.php?action=deconnexion">Deconnexion</a>
+                        <a href="assets/include/serviceWeb.php?action=deconnexion">Deconnexion</a>
                     </li>
                      <?php } ?>
                 </ul>
             </div>
             <!-- Fin Page du site -->
-            
-            <!-- Formulaire de recherche -->
-            <div class="col-xs-4 pull-right" >
-                <form action="index.php"  method="post" name="formSearch">
-                    <div class="row col-xs-12">
-                        <div class="col-xs-10 "><input type="text" name="keyWord" class="form-control col-xs-12 " id="searchInput" value=rechercher></div>
-                        <div class=""><img src="assets/images/loupe_logo.png" alt="Submit" id="loupeLogo" class="img-responsive pull-right" onclick="document.forms['formSearch'].submit();" /></div>
-                    </div>
-                </form>
-            </div>
-            <!-- Fin Formulaire de recherche -->
-           
+
+
+
         </div>
-      
+
     </nav>
     <!-- Fin Navigation -->
