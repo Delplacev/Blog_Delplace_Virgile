@@ -1,0 +1,17 @@
+.menu {
+	width: 200px;
+}
+
+h1 {
+	font-family: Impact;
+	font-size: 20px;
+}
+
+.footer{
+    font-size:10px;
+    color:#f00;
+}
+
+.row marketing{
+    margin-top: 1em;
+}
