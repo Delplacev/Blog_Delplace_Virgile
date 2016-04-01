@@ -79,7 +79,29 @@ INSERT INTO `newsletter` (`email`, `idAbo`) VALUES
 ('vd@cd.fr', 2),
 ('vd@vd.fr', 3),
 ('vd@vd.frf', 4);
+-- --------------------------------------------------------
 
+--
+-- Structure de la table `vote`
+--
+
+CREATE TABLE `vote` (
+  `idVote` int(11) NOT NULL,
+  `idArticle` int(11) NOT NULL,
+  `ipVote` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `vote`
+--
+
+INSERT INTO `vote` (`idVote`, `idArticle`, `ipVote`) VALUES
+(4, 1, '12345'),
+(5, 1, '12345'),
+(6, 1, '12345'),
+(7, 1, '::1'),
+(8, 1, '::1'),
+(9, 2, '::1');
 -- --------------------------------------------------------
 --
 -- Index pour les tables exportées
@@ -102,7 +124,12 @@ ALTER TABLE `utilisateurs`
  --
  ALTER TABLE `newsletter`
   ADD PRIMARY KEY (`idAbo`);
-  
+
+--
+-- Index pour la table `vote`
+--
+ALTER TABLE `vote`
+  ADD PRIMARY KEY (`idVote`);
 --
 -- AUTO_INCREMENT pour les tables exportées
 --
@@ -122,3 +149,6 @@ MODIFY `idAbo` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 ALTER TABLE `utilisateurs`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+--
+ALTER TABLE `vote`
+  MODIFY `idVote` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;

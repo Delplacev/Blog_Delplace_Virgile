@@ -47,3 +47,8 @@ ensuite l'afficher sur la page d'accueil. Un script d'upload permet d'ajouter de
 
 Le projet à était developper avec sublime text. En lien avec une base MySql.
 J'ai utiliser les identifiant root pour acceder à la base de données.
+
+MAJ 01/04 :
+
+Pour le système de vote j'ai choisi de faire une table autre qu'article pour y stocker l'adresse IP de 
+chaque vote pour chaque article. Cela évite les doublons de vote.

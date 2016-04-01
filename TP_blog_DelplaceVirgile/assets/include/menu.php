@@ -1,9 +1,14 @@
      <!-- Navigation -->
         <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-          <!-- Formulaire de recherche -->
-          <div class="col-xs-12 topSearch" >
-            <div class="col-xs-8 pull-right">
+     
+
+            <div class="col-md-4">
+                <a class="navbar-brand" href="index.php"><h3>Blog de Virgile <small>Pour m'initier à PHP</small></h3></a>
+            </div>
+                 <!-- Formulaire de recherche -->
+          <div class="col-md-6" >
+            <div class="pull-right">
               <form action="index.php"  method="post" name="formSearch">
                   <div class="row col-md-6">
                       <div class="col-xs-10" ><input type="text" class="col-xs-12"name="keyWord"  id="searchInput" value=rechercher></div>
@@ -18,36 +23,38 @@
           </div>
           <!-- Fin Formulaire de recherche -->
 
-            <div class="navbar-header ">
-                <a class="navbar-brand" href="index.php"><h3>Blog de Virgile <small>Pour m'initier à PHP</small></h3></a>;
-            </div>
-
-
             <!-- Page du site -->
-            <div class="collapse navbar-collapse" >
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="page-scroll">
-                        <a href="index.php">Accueil</a>
-                    </li>
-                     <?php if($connect == true ){ ?>
-                    <li class="page-scroll">
-                        <a href="ajouterArticle.php">Rédiger un article</a>
-                    </li>
-                    <?php } ?>
+            <div class="col-md-2" >
+                 <ul class="nav navbar-av navbar-right">
+                    <li class="divider-vertical"></li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">Menu <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="page-scroll">
+                            <a href="index.php">Accueil</a>
+                                </li>
+                                 <?php if($connect == true ){ ?>
+                                <li class="page-scroll">
+                                    <a href="ajouterArticle.php">Rédiger un article</a>
+                                </li>
+                                <?php } ?>
 
-                     <?php if($connect == false ){ ?>
-                     <li class="page-scroll">
-                        <a href="inscription.php">Inscription</a>
+                                 <?php if($connect == false ){ ?>
+                                 <li class="page-scroll">
+                                    <a href="inscription.php">Inscription</a>
+                                </li>
+                                <li class="page-scroll">
+                                    <a href="connexion.php">Connexion</a>
+                                </li>
+                                 <?php } else { ?>
+                                  <li class="page-scroll">
+                                    <a href="assets/include/serviceWeb.php?action=deconnexion">Deconnexion</a>
+                                </li>
+                                 <?php } ?>
+                        </ul>
                     </li>
-                    <li class="page-scroll">
-                        <a href="connexion.php">Connexion</a>
-                    </li>
-                     <?php } else { ?>
-                      <li class="page-scroll">
-                        <a href="assets/include/serviceWeb.php?action=deconnexion">Deconnexion</a>
-                    </li>
-                     <?php } ?>
                 </ul>
+                
             </div>
             <!-- Fin Page du site -->
 

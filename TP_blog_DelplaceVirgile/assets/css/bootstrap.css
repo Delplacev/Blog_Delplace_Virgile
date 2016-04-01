@@ -3582,7 +3582,7 @@ tbody.collapse.in {
   float: left;
   min-width: 160px;
   padding: 5px 0;
-  margin: 2px 0 0;
+
   list-style: none;
   font-size: 15px;
   text-align: left;
@@ -4324,7 +4324,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-brand {
   float: left;
-  padding: 19.5px 15px;
   font-size: 19px;
   line-height: 21px;
   height: 60px;
