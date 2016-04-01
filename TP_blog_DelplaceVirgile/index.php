@@ -73,7 +73,7 @@ include('assets/protected/connectBDD.php');
                     if ($ipVote == true) {
                         echo '<p>Vous avait deja voter pour cette article</p>';
                     } else {
-                        echo '<a data-idarticle="' . $ligne[id] . '" id="addVote">Voter</a>';
+                          echo '<button data-idarticle="' . $ligne[id] . '" id="addVote">Voter</button>';
                     }
                 }
                 mysql_close($link);
