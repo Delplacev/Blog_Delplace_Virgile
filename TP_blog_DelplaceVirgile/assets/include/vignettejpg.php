@@ -7,6 +7,7 @@
 // redim 
 // rendre image dest 
 
+
 if($_GET["imgSrc"] != ""){
 	// Creation de l'emplacement de l'image
 	$filename = "../images/".$_GET["imgSrc"];
