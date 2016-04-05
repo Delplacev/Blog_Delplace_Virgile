@@ -1,0 +1,2 @@
+#retirer l'accés a tout le monde pour proteger les fichiers confidentiel
+deny from all
