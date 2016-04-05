@@ -73,7 +73,14 @@ include('assets/protected/connectBDD.php');
                     if ($ipVote == true) {
                         echo '<p>Vous avait deja voter pour cette article</p>';
                     } else {
-                          echo '<button data-idarticle="' . $ligne[id] . '" id="addVote">Voter</button>';
+                        echo '<button data-idarticle="' . $ligne[id] . '" class="addVote">Voter</button>';
+                    echo"</p>";
+                    if ($connect == true) {
+                        echo '<a href="editerArticle.php?idArticle=' . $ligne[id] . '"><input type="button" class="btn-primary" value="Editer"></a>';
+                        echo '<a href="assets/include/serviceWeb.php?action=deleteArticle&idArticle=' . $ligne[id] . '"><input type="button" class="btn-primary" id="btnSuppr" value="Suprimer "></a></br></center><hr>';
+                    } else {
+                        echo "<a href='connexion.php'>Connecter vous pour editer l'article</a>";
+                    }
                     }
                 }
                 mysql_close($link);
