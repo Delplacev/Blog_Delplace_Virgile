@@ -7,7 +7,7 @@
                 <div class="col-lg-12">
                     <?php
 
-                    
+
                     //Si on est connecter
                     if (isset($_SESSION["session"]) && isset($_COOKIE["nomConnecter"])) {
                         $connect = true;
@@ -26,8 +26,10 @@
     </div>
 </footer>
 <!-- FIN Footer -->
-<script src="js/jquery.1.8.2.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-1.8.2.js"></script>
+<script type="text/javascript" src="assets/js/jsBlog.js"></script>
+<script type="text/javascript" src="assets/js/bjqs-1.3.js"></script>
+<script  src="assets/js/bootstrap.min.js"></script>
 </body>
 <!-- FIN Body -->
 </html>

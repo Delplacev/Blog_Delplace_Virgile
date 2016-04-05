@@ -12,15 +12,12 @@ include('assets/include/setCookie.php'); ?>
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    
-   
+
+
     <link href="assets/css/bootstrap.css" rel="stylesheet">
      <link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet">
     <link href="assets/css/freelancer.css" rel="stylesheet">
     <link type="text/css" rel="Stylesheet" href="assets/css/bjqs.css" />
-    <script type="text/javascript" src="assets/js/jquery-1.8.2.js"></script>
-    <script type="text/javascript" src="assets/js/jsBlog.js"></script>
-    <script type="text/javascript" src="assets/js/bjqs-1.3.js"></script>
   </head>
 
   <body>
